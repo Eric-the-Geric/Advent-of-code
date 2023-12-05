@@ -1,10 +1,6 @@
-
-
-
 total = 0
 with open("eg.txt", "r") as f:
     lines = f.readlines()
-    
     for line in lines:
         points = 0
         n = -1
@@ -14,8 +10,6 @@ with open("eg.txt", "r") as f:
         winners = [x for x in winners if x.isdigit()]
         elfs = elfs.split(" ")
         elfs = [x.replace("\n", "") for x in elfs if x]
-        print(elfs)
-        print(winners)
         for num in elfs:
             if num in winners:
                 print(card, num)
@@ -24,7 +18,6 @@ with open("eg.txt", "r") as f:
             points += 2**n
         elif n ==0:
             points+=1
-        print(points)
         total+=points
 print(total)
         

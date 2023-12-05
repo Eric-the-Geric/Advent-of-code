@@ -12,19 +12,16 @@ with open("in.txt", "r") as f:
         winners = winners.split(" ")
         winners = [x for x in winners if x.isdigit()]
         elfs = elfs.split(" ")
-
         elfs = [x.replace("\n", "") for x in elfs if x]
         
         for num in elfs:
             if num in winners:
                 points+= 1
-        
+
         for copy in range(cards[int(card_num)]):
             if points:
                 for i in range(int(card_num)+1, int(card_num)+points+1):
-
-                    cards[i] += 1
-        
+                    cards[i] += 1 
 sum = 0
 for key, value in cards.items():
     sum+=value
