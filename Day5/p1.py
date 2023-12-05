@@ -1,9 +1,12 @@
-
+import re
 
 def main():
     path = "eg.txt"
     lines = parser(path)
-    print(lines)
+    
+    for line in lines:
+        line = re.findall(r"\d+", line)
+        print(line)
 
 
 
