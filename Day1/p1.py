@@ -1,4 +1,5 @@
 
+# I forgot to add a new file for p1 and p2 so this is actualy only part 2 :P
 def main():
    
     digs = ["1","2","3","4","5","6","7","8","9", "0"]
